@@ -55,5 +55,3 @@ Pour lancer le projet Angular après l'avoir récupéré depuis GitHub, suivez l
 - Intégration des paiements en ligne.
 - Suivi des commandes en temps réel.
 - Notifications de livraison.
-
-Merci d'utiliser notre application de shop en ligne ! Si vous avez des questions ou des suggestions, n'hésitez pas à ouvrir une issue sur GitHub. 😊
