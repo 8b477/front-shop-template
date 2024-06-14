@@ -26,7 +26,7 @@ Pour lancer le projet Angular après l'avoir récupéré depuis GitHub, suivez l
 1. **Cloner le dépôt** :
 
    ```bash
-   git clone https://github.com/votre-utilisateur/votre-depot.git
+   git clone https://github.com/8b477/front-shop-template.git
    ```
 
 2. **Naviguer dans le répertoire du projet** :
