@@ -1,27 +1,59 @@
-# FrontShopTemplate
+# 🛒 Shop en Ligne
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.5.
+Bienvenue sur l'application de shop en ligne ! Cette application permet de faire ses courses en ligne et de décider de la date de livraison. 🎉
 
-## Development server
+## 🚀 Technologies Utilisées
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Frontend
 
-## Code scaffolding
+- **Framework** : Angular 17
+- **CSS** : Tailwind CSS
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Backend
 
-## Build
+- **Framework** : ASP.NET Core
+- **Base de données** : SQL Server
+- **ORM** : Entity Framework Core
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 🔐 Authentification et Base de Données
 
-## Running unit tests
+La gestion de l'authentification et de la base de données est réalisée avec Entity Framework Core.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 📋 Tutoriel pour Lancer le Projet Angular
 
-## Running end-to-end tests
+Pour lancer le projet Angular après l'avoir récupéré depuis GitHub, suivez les étapes ci-dessous :
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. **Cloner le dépôt** :
 
-## Further help
+   ```bash
+   git clone https://github.com/votre-utilisateur/votre-depot.git
+   ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+2. **Naviguer dans le répertoire du projet** :
+
+   ```bash
+   cd votre-depot/front-shop-template
+   ```
+
+3. **Installer les dépendances** :
+
+   ```bash
+   npm install
+   ```
+
+4. **Lancer l'application** :
+
+   ```bash
+   ng serve
+   ```
+
+5. **Accéder à l'application** :
+   Ouvrez votre navigateur et allez sur [http://localhost:4200](http://localhost:4200)
+
+## 🌟 Fonctionnalités à venir
+
+- Intégration des paiements en ligne.
+- Suivi des commandes en temps réel.
+- Notifications de livraison.
+
+Merci d'utiliser notre application de shop en ligne ! Si vous avez des questions ou des suggestions, n'hésitez pas à ouvrir une issue sur GitHub. 😊
