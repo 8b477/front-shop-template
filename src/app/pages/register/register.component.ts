@@ -6,4 +6,15 @@ import { Component } from '@angular/core';
   imports: [],
   templateUrl: './register.component.html',
 })
-export class RegisterComponent {}
+export class RegisterComponent {
+  isPassVisible: boolean = false;
+  isPassConfirmVisible: boolean = false;
+
+  public togglePasswd() {
+    this.isPassVisible = !this.isPassVisible;
+  }
+
+  public togglePasswdConfirm() {
+    this.isPassVisible = !this.isPassVisible;
+  }
+}
