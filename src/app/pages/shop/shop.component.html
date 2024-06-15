@@ -1,33 +1,49 @@
 <div class="mx-auto h-full bg-slate-400">
-  <h1 class="p-4 text-center text-lg">
-    Liste des articles disponible dans nos magasins
-  </h1>
   <div
-    class="mx-auto flex w-4/5 flex-wrap gap-1 rounded-lg border border-slate-950 p-5"
+    class="mx-auto my-4 flex w-fit flex-col gap-3 rounded-lg border border-slate-600 bg-slate-600 p-3 shadow-md shadow-slate-200"
   >
-    <div class="w-1/4">
-      <app-article />
-    </div>
-    <div class="w-1/4">
-      <app-article />
-    </div>
-    <div class="w-1/4">
-      <app-article />
-    </div>
-    <div class="w-1/4">
-      <app-article />
-    </div>
-    <div class="w-1/4">
-      <app-article />
-    </div>
-    <div class="w-1/4">
-      <app-article />
-    </div>
-    <div class="w-1/4">
-      <app-article />
-    </div>
-    <div class="w-1/4">
-      <app-article />
+    <input
+      class="rounded-md p-1"
+      type="text"
+      placeholder="ex: banane"
+      [(ngModel)]="searchItem"
+    />
+    <select class="rounded-md p-1">
+      <option value="0">Categorie :</option>
+      @for (item of selectOptions; track $index) {
+      <option value="{{ $index }}">{{ item }}</option>
+      }
+    </select>
+  </div>
+
+  <div
+    class="mx-auto mb-3 flex w-3/5 flex-wrap justify-center gap-1 rounded-lg bg-slate-600 p-1 py-2"
+  >
+    <div class="mx-auto flex w-full flex-wrap justify-center gap-1 gap-y-2 p-4">
+      <div class="w-1/5 flex-initial">
+        <app-article />
+      </div>
+      <div class="w-1/5 flex-initial">
+        <app-article />
+      </div>
+      <div class="w-1/5 flex-initial">
+        <app-article />
+      </div>
+      <div class="w-1/5 flex-initial">
+        <app-article />
+      </div>
+      <div class="w-1/5 flex-initial">
+        <app-article />
+      </div>
+      <div class="w-1/5 flex-initial">
+        <app-article />
+      </div>
+      <div class="w-1/5 flex-initial">
+        <app-article />
+      </div>
+      <div class="w-1/5 flex-initial">
+        <app-article />
+      </div>
     </div>
   </div>
 </div>
