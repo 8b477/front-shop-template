@@ -1,9 +1,7 @@
 <div
-  class="flex content-center items-center justify-between bg-slate-800 px-2 text-slate-100"
-  [style]="{ height: '10vh' }"
+  class="flex h-full content-center items-center justify-between bg-slate-800 px-2 text-slate-100"
 >
-  <!-- <p [routerLink]="['']">The best Market</p> -->
-
+  <!-- LOGO (left side) -->
   <svg
     class="hover:cursor-pointer"
     [routerLink]="['']"
@@ -50,12 +48,13 @@
     />
   </svg>
 
+  <!-- NAVIGATION LINK (right side)-->
   <ul class="flex gap-10 px-4">
     <li class="hover:underline">
       <a class="hover:text-slate-300" [routerLink]="['']">Home</a>
     </li>
     <li class="hover:underline">
-      <a class="hover:text-slate-300" [routerLink]="['articles']">Articles</a>
+      <a class="hover:text-slate-300" [routerLink]="['shop']">Shop</a>
     </li>
     <li class="hover:underline">
       <a class="text-slate-300" [routerLink]="['pannier']">Pannier</a>

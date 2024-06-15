@@ -1,7 +1,16 @@
-<app-nav />
+<!-- NAVIGATION -->
+<div class="flex h-screen flex-col">
+  <div class="h-[10%]">
+    <app-nav />
+  </div>
 
-<div class="bg-slate-400" [style]="{ height: '85vh' }">
-  <router-outlet />
+  <!-- MAIN -->
+  <div class="grow bg-slate-400">
+    <router-outlet />
+  </div>
+
+  <!-- FOOTER -->
+  <div class="h-[7%]">
+    <app-footer />
+  </div>
 </div>
-
-<app-footer />
