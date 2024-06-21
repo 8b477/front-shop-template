@@ -15,5 +15,5 @@
 - Suivi des commandes en temps réel.
 - Notifications de livraison.
 
-*Readme du Backend*
-[🔎](https://github.com/8b477/back-shop-template/edit/master/README.md)
+*projet Backend*
+[🔎](https://github.com/8b477/back-shop-template)
