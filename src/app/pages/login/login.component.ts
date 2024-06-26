@@ -13,9 +13,4 @@ export class LoginComponent {
   public togglePasswd() {
     this.isPassVisible = !this.isPassVisible;
   }
-
-  public demo(): void {
-    debugger;
-    console.log('coucou');
-  }
 }
