@@ -15,6 +15,6 @@ export class RegisterComponent {
   }
 
   public togglePasswdConfirm() {
-    this.isPassVisible = !this.isPassVisible;
+    this.isPassConfirmVisible = !this.isPassConfirmVisible;
   }
 }

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { NavComponent } from './components/shared/nav/nav.component';
@@ -10,6 +10,10 @@ import { NavComponent } from './components/shared/nav/nav.component';
   templateUrl: './app.component.html',
   imports: [CommonModule, RouterOutlet, NavComponent, FooterComponent],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'front-shop-template';
+
+  ngOnInit(): void {
+    debugger;
+  }
 }
