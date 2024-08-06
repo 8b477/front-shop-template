@@ -1,16 +1,18 @@
 <!-- NAVIGATION -->
-<div class="flex min-h-screen flex-col">
-  <div>
+<div class="box-border flex min-h-screen flex-col bg-main text-textPrimary">
+  <div class="h-[10vh]">
     <app-nav />
   </div>
 
   <!-- MAIN -->
-  <div class="grow bg-indigo-300">
-    <router-outlet />
+  <div class="flex grow justify-center overflow-hidden">
+    <div>
+      <router-outlet />
+    </div>
   </div>
 
   <!-- FOOTER -->
-  <div>
+  <div class="h-[5vh]">
     <app-footer />
   </div>
 </div>

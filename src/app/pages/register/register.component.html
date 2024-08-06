@@ -1,55 +1,58 @@
 <div
-  class="absolute left-1/3 top-1/4 mx-auto flex min-h-96 w-1/4 items-center rounded-xl bg-indigo-400 text-teal-200"
+  class="relative mt-28 flex h-4/6 w-96 flex-col flex-wrap justify-center gap-5 rounded-xl bg-card px-5 align-middle text-2xl"
+  style="width: 35rem"
 >
-  <div
-    class="flex size-full flex-col flex-wrap items-center justify-center gap-3"
+  <span
+    class="absolute right-4 top-0 size-6 text-green-300 hover:cursor-pointer hover:text-orange-300"
+    [routerLink]="['/login']"
+    ><-</span
   >
-    <div class="p-3">
-      <h3 class="underline">Connection</h3>
-    </div>
-    <div class="flex w-56 flex-col">
-      <label for="email">Entre ton mail :</label>
-      <input
-        class="rounded-lg p-2 text-slate-700"
-        id="email"
-        type="email"
-        placeholder="ex: jhon@mail.demo"
-      />
-    </div>
-    <div class="flex w-56 flex-col">
-      <label for="passwd">Entre ton mdp :</label>
-      <div class="flex flex-row">
-        <input
-          class="rounded-lg p-2 text-slate-700"
-          id="passwd"
-          [type]="isPassVisible ? 'text' : 'password'"
-          placeholder="ex: Ab12*"
-        />
+  <div class="m-6">
+    <h3 class="text-center">Création de votre compte</h3>
+  </div>
 
-        <button class="hover:scale-110" (click)="togglePasswd()">👀</button>
-      </div>
+  <label for="email">Mail</label>
+  <input
+    class="rounded-lg p-2 text-slate-700"
+    id="email"
+    type="email"
+    placeholder="ex: jhon@mail.demo"
+  />
 
-      <div class="flex w-56 flex-col">
-        <label for="passwd">Confirme ton mdp :</label>
-        <div class="flex flex-row">
-          <input
-            class="rounded-lg p-2 text-slate-700"
-            id="passwd"
-            [type]="isPassConfirmVisible ? 'text' : 'password'"
-            placeholder="ex: Ab12*"
-          />
-          <button class="hover:scale-110" (click)="togglePasswdConfirm()">
-            👀
-          </button>
-        </div>
-      </div>
-    </div>
+  <label for="passwd">Mot de passe</label>
+  <div class="relative flex flex-row">
+    <input
+      class="w-full rounded-lg p-2 text-slate-700"
+      id="passwd"
+      [type]="isPassVisible ? 'text' : 'password'"
+      placeholder="ex: Ab12*"
+    />
 
-    <button
-      type="button"
-      class="mb-2 me-2 rounded-lg border border-white bg-indigo-500 px-5 py-2.5 text-center text-sm font-medium text-teal-200 hover:scale-110 hover:opacity-90 focus:outline-none focus:ring-4"
-    >
-      Send
+    <button class="absolute right-0 hover:scale-110" (click)="togglePasswd()">
+      👀
     </button>
   </div>
+
+  <label for="passwd">Confirmation mot de passe</label>
+  <div class="relative flex flex-row">
+    <input
+      class="w-full rounded-lg p-2 text-slate-700"
+      id="passwd"
+      [type]="isPassConfirmVisible ? 'text' : 'password'"
+      placeholder="ex: Ab12*"
+    />
+    <button
+      class="absolute right-0 hover:scale-110"
+      (click)="togglePasswdConfirm()"
+    >
+      👀
+    </button>
+  </div>
+
+  <button
+    type="button"
+    class="mt-2 rounded-lg border border-white bg-indigo-500 px-5 py-2.5 text-center text-sm font-medium text-teal-200 hover:text-lime-100 hover:opacity-90 hover:outline hover:outline-lime-200 focus:ring-4"
+  >
+    Send
+  </button>
 </div>
