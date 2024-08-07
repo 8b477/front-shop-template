@@ -1,43 +1,64 @@
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environments';
+import { UserCreateDTO } from '../../../models/validations-dto/user/create/UserCreateDTO';
+import { UserMailUpdateDTO } from '../../../models/validations-dto/user/update/UserMailUpdateDTO';
+import { UserPseudoUpdateDTO } from '../../../models/validations-dto/user/update/UserPseudoUpdateDTO';
+import { UserPwdUpdateDTO } from '../../../models/validations-dto/user/update/UserPwdUpdateDTO';
+import { UserUpdateDTO } from '../../../models/validations-dto/user/update/UserUpdateDTO';
 import { UserViewDTO } from '../../../models/views-dto/user/UserViewDTO';
-import { UserGateway } from '../../interface/user/UserGateway';
+import { IUserGateway } from '../../interface/user/IUserGateway';
 
-export class UserRepository implements UserGateway {
-  // VARIABLES
-  baseUrl = environment.apiUrl;
+export class UserRepository implements IUserGateway {
+  // <--------------------------------> TODO <-------------------------------->
+  // Implémente la gestion des erreurs de récupération de datas
+  // <--------------------------------> **** <-------------------------------->
 
-  // INJECTION
+  //#region <-------------> VARIABLE <------------->
+  baseUrl: string = environment.apiUrl;
+  //#endregion
 
-  // GET
+  //#region <-------------> INJECTION <------------->
+  //#endregion
+
+  //#region <-------------> CREATE <------------->
+  create(userToAdd: UserCreateDTO): Observable<UserViewDTO> {
+    throw new Error('Method not implemented.');
+  }
+  //#endregion
+
+  //#region //<-------------> GET <------------->
   getAll(): Observable<UserViewDTO[]> {
     throw new Error('Method not implemented.');
   }
-  getById(): Observable<UserViewDTO> {
+  getProfil(): Observable<UserViewDTO> {
     throw new Error('Method not implemented.');
   }
-  getByPseudo(): Observable<UserViewDTO[]> {
+  getById(idUser: number): Observable<UserViewDTO> {
     throw new Error('Method not implemented.');
   }
-  // POST
-  create(): Observable<UserViewDTO> {
+  getByPseudo(pseudoSearch: string): Observable<UserViewDTO[]> {
     throw new Error('Method not implemented.');
   }
-  // PUT
-  update(): Observable<string> {
+  //#endregion
+
+  //#region <-------------> UPDATE <------------->
+  update(idUser: number, userToUpdate: UserUpdateDTO): Observable<string> {
     throw new Error('Method not implemented.');
   }
-  updatePseudo(): Observable<string> {
+  updatePseudo(idUser: number, userPseudoToUpdate: UserPseudoUpdateDTO): Observable<string> {
     throw new Error('Method not implemented.');
   }
-  updateMail(): Observable<string> {
+  updateMail(idUser: number, userMailToUpdate: UserMailUpdateDTO): Observable<string> {
     throw new Error('Method not implemented.');
   }
-  updatePwd(): Observable<string> {
+  updatePwd(idUser: number, userPwdToUpdate: UserPwdUpdateDTO): Observable<string> {
     throw new Error('Method not implemented.');
   }
-  // DELETE
-  delete(): Observable<boolean> {
+  //#endregion
+
+  //#region <-------------> DELETE <------------->
+  delete(idUser: number): Observable<boolean> {
     throw new Error('Method not implemented.');
   }
+  //#endregion
 }

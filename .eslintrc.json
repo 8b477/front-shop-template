@@ -1,18 +1,17 @@
 {
   "root": true,
-  "ignorePatterns": [
-    "projects/**/*"
-  ],
+  "ignorePatterns": ["projects/**/*"],
   "overrides": [
     {
-      "files": [ "*.html","*.ts"],
+      "files": ["*.html", "*.ts"],
       "parser": "@angular-eslint/template-parser",
       "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:@angular-eslint/recommended",
         "plugin:@angular-eslint/template/process-inline-templates",
-        "plugin:tailwindcss/recommended"
+        "plugin:tailwindcss/recommended",
+        "plugin:prettier/recommended"
       ],
       "rules": {
         "@angular-eslint/directive-selector": [
@@ -30,13 +29,34 @@
             "prefix": "app",
             "style": "kebab-case"
           }
-        ]
+        ],
+        "prettier/prettier": ["error", {
+          "printWidth": 120,
+          "tabWidth": 2,
+          "singleQuote": true,
+          "trailingComma": "es5",
+          "bracketSpacing": true,
+          "semi": true,
+          "useTabs": false,
+          "arrowParens": "avoid",
+          "endOfLine": "lf",
+          "htmlWhitespaceSensitivity": "css",
+          "insertPragma": false,
+          "jsxBracketSameLine": false,
+          "jsxSingleQuote": false,
+          "proseWrap": "preserve",
+          "quoteProps": "as-needed",
+          "requirePragma": false,
+          "vueIndentScriptAndStyle": false,
+          "embeddedLanguageFormatting": "auto",
+          "singleAttributePerLine": false,
+          "bracketSameLine": false,
+          "functionDeclarationParenthesesNewline": "never"
+        }]
       }
     },
     {
-      "files": [
-        "*.html"
-      ],
+      "files": ["*.html"],
       "extends": [
         "plugin:@angular-eslint/template/recommended",
         "plugin:@angular-eslint/template/accessibility"
