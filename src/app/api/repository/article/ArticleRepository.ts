@@ -8,7 +8,7 @@ import { ArticlePromoUpdateDTO } from '../../../models/validations-dto/article/u
 import { ArticleStockUpdateDTO } from '../../../models/validations-dto/article/update/ArticleStockUpdateDTO';
 import { ArticleUpdateDTO } from '../../../models/validations-dto/article/update/ArticleUpdateDTO';
 import { ArticleViewDTO } from '../../../models/views-dto/article/ArticleViewDTO';
-import { IArticleGetaway } from '../../interface/article/IArticleGetaway';
+import { IArticleGetaway } from '../../interface/gateway/article/IArticleGetaway';
 
 export class ArticleRepository implements IArticleGetaway {
   // <--------------------------------> TODO <-------------------------------->

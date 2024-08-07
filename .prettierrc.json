@@ -8,7 +8,7 @@
   "useTabs": false,
   "arrowParens": "avoid",
   "endOfLine": "lf",
-  "htmlWhitespaceSensitivity": "css",
+  "htmlWhitespaceSensitivity": "ignore",
   "insertPragma": false,
   "jsxBracketSameLine": false,
   "jsxSingleQuote": false,
@@ -20,3 +20,4 @@
   "singleAttributePerLine": false,
   "functionDeclarationParenthesesNewline": "never"
 }
+

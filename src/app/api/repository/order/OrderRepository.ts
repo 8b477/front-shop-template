@@ -5,7 +5,7 @@ import { OrderSentAtUpdateDTO } from '../../../models/validations-dto/order/upda
 import { OrderStatusAndSentAtUpdateDTO } from '../../../models/validations-dto/order/update/OrderStatusAndSentAtUpdateDTO';
 import { OrderStatusUpdateDTO } from '../../../models/validations-dto/order/update/OrderStatusUpdateDTO';
 import { OrderViewDTO } from '../../../models/views-dto/order/OrderViewDTO';
-import { IOrderGateway } from '../../interface/order/IOrderGateway';
+import { IOrderGateway } from '../../interface/gateway/order/IOrderGateway';
 
 export class OrderRepository implements IOrderGateway {
   // <--------------------------------> TODO <-------------------------------->

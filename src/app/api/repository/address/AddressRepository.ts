@@ -6,7 +6,7 @@ import { AddressCityUpdateDTO } from '../../../models/validations-dto/address/up
 import { AddressCountryUpdateDTO } from '../../../models/validations-dto/address/update/AddressCountryUpdateDTO';
 import { AddressPhoneNumberUpdateDTO } from '../../../models/validations-dto/address/update/AddressPhoneNumberUpdateDTO';
 import { AddressViewDTO } from '../../../models/views-dto/address/AddressViewDTO';
-import { IAddressGetawway } from '../../interface/address/IAddressGetaway';
+import { IAddressGetawway } from '../../interface/gateway/address/IAddressGetaway';
 
 export class AddressRepository implements IAddressGetawway {
   // <--------------------------------> TODO <-------------------------------->

@@ -3,7 +3,7 @@ import { environment } from '../../../environments/environments';
 import { Category } from '../../../models/entity/Category';
 import { CategoryCreateDTO } from '../../../models/validations-dto/category/create/CategoryCreateDTO';
 import { CategoryUpdateDTO } from '../../../models/validations-dto/category/update/CategoryUpdateDTO';
-import { ICategoryGeteway } from '../../interface/category/ICategoryGateway';
+import { ICategoryGeteway } from '../../interface/gateway/category/ICategoryGateway';
 
 export class CategoryRepository implements ICategoryGeteway {
   // <--------------------------------> TODO <-------------------------------->
