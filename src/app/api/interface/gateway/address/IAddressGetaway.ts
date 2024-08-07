@@ -12,7 +12,7 @@ export interface IAddressGetawway {
   //#endregion
 
   //#region //<-------------> GET <------------->
-  getAll(): Observable<Address>;
+  getAll(): Observable<Address[]>;
   getByPostalCode(postalCodeSearch: string): Observable<Address>;
   getByCity(citySearch: string): Observable<Address>;
   getByCountry(countrySearch: string): Observable<Address>;

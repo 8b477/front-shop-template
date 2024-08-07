@@ -17,9 +17,12 @@ export interface IOrderGateway {
   //#endregion
 
   //#region <-------------> UPDATE <------------->
-  updateStatusOrder(orderStatusToUpdate: OrderStatusUpdateDTO): Observable<string>;
-  updateSentAtOrder(orderSentAtToUpdate: OrderSentAtUpdateDTO): Observable<string>;
-  updateStatusAndSentAtOrder(orderStatusAndSentAtToUpdate: OrderStatusAndSentAtUpdateDTO): Observable<string>;
+  updateStatusOrder(idOrder: number, orderStatusToUpdate: OrderStatusUpdateDTO): Observable<string>;
+  updateSentAtOrder(idOrder: number, orderSentAtToUpdate: OrderSentAtUpdateDTO): Observable<string>;
+  updateStatusAndSentAtOrder(
+    idOrder: number,
+    orderStatusAndSentAtToUpdate: OrderStatusAndSentAtUpdateDTO
+  ): Observable<string>;
   //#endregion
 
   //#region <-------------> DELETE <------------->

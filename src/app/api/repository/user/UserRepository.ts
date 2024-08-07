@@ -29,7 +29,7 @@ export class UserRepository implements IUserGateway {
   create(userToAdd: UserCreateDTO): Observable<UserViewDTO> {
     return this.callerHttp
       .post<UserViewDTO>(`${this.baseUrl}/user`, userToAdd)
-      .pipe(this.errorService.handleRequestError('Récupération des utilisateurs'));
+      .pipe(this.errorService.handleRequestError("Création d'un utilisateur"));
   }
   //#endregion
 
@@ -47,12 +47,14 @@ export class UserRepository implements IUserGateway {
   getById(idUser: number): Observable<UserViewDTO> {
     return this.callerHttp
       .get<UserViewDTO>(this.baseUrl + '/user/profil/' + idUser)
-      .pipe(this.errorService.handleRequestError('Récupération profil utilisateur'));
+      .pipe(this.errorService.handleRequestError("Récupération d'un utilisateur par son identifiant"));
   }
   getByPseudo(pseudoSearch: string): Observable<UserViewDTO[]> {
     return this.callerHttp
       .get<UserViewDTO[]>(this.baseUrl + '/user/' + pseudoSearch)
-      .pipe(this.errorService.handleRequestError('Récupération des utilisateurs par pseudo'));
+      .pipe(
+        this.errorService.handleRequestError(`Récupération des utilisateurs correspondant au pseudo : ${pseudoSearch}`)
+      );
   }
   //#endregion
 
@@ -65,17 +67,17 @@ export class UserRepository implements IUserGateway {
   updatePseudo(idUser: number, userPseudoToUpdate: UserPseudoUpdateDTO): Observable<string> {
     return this.callerHttp
       .put<string>(this.baseUrl + '/user/pseudo/' + idUser, userPseudoToUpdate)
-      .pipe(this.errorService.handleRequestError("Mise à jour d'un pseudo utilisateur"));
+      .pipe(this.errorService.handleRequestError(`Mise à jour d'un pseudo utilisateur : ${userPseudoToUpdate}`));
   }
   updateMail(idUser: number, userMailToUpdate: UserMailUpdateDTO): Observable<string> {
     return this.callerHttp
       .put<string>(this.baseUrl + '/mail/' + idUser, userMailToUpdate)
-      .pipe(this.errorService.handleRequestError("Mise à jour d'un mail utilisateur"));
+      .pipe(this.errorService.handleRequestError(`Mise à jour d'un mail utilisateur : ${userMailToUpdate}`));
   }
   updatePwd(idUser: number, userPwdToUpdate: UserPwdUpdateDTO): Observable<string> {
     return this.callerHttp
       .put<string>(this.baseUrl + '/pwd/' + idUser, userPwdToUpdate)
-      .pipe(this.errorService.handleRequestError("Mise à jour du mot de passe d'un utilisateur"));
+      .pipe(this.errorService.handleRequestError(`Mise à jour du mot de passe d'un utilisateur`));
   }
   //#endregion
 

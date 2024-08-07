@@ -13,7 +13,7 @@ export interface ICategoryGeteway {
   //#endregion
 
   //#region //<-------------> GET <------------->
-  getAll(): Observable<Category>;
+  getAll(): Observable<Category[]>;
   getById(idCategory: number): Observable<Category>;
 
   //#endregion
